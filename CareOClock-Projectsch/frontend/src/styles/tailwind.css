@@ -1,0 +1,71 @@
+/* frontend/src/styles/tailwind.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom elderly-friendly styles */
+@layer base {
+    body {
+        font-family: 'Inter', 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+    }
+}
+
+@layer components {
+    .btn-elderly {
+        @apply min-h-elderly-btn px-8 py-4 text-elderly-lg font-medium rounded-lg transition-colors duration-200 focus:outline-none focus:ring-4 focus:ring-opacity-50;
+    }
+
+    .btn-primary {
+        @apply btn-elderly bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-300;
+    }
+
+    .btn-secondary {
+        @apply btn-elderly bg-gray-200 text-gray-800 hover:bg-gray-300 focus:ring-gray-300;
+    }
+
+    .btn-success {
+        @apply btn-elderly bg-green-600 text-white hover:bg-green-700 focus:ring-green-300;
+    }
+
+    .btn-danger {
+        @apply btn-elderly bg-red-600 text-white hover:bg-red-700 focus:ring-red-300;
+    }
+
+    .input-elderly {
+        @apply w-full px-4 py-3 text-elderly-base border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200;
+    }
+
+    .card-elderly {
+        @apply bg-white rounded-xl shadow-lg p-6 border border-gray-200;
+    }
+
+    .text-elderly-heading {
+        @apply text-elderly-2xl font-bold text-gray-800;
+    }
+
+    .text-elderly-body {
+        @apply text-elderly-base text-gray-700 leading-relaxed;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .btn-primary {
+        @apply bg-blue-800 border-2 border-blue-900;
+    }
+
+    .input-elderly {
+        @apply border-4 border-gray-900;
+    }
+}
+
+/* Print styles for reports */
+@media print {
+    .no-print {
+        display: none !important;
+    }
+
+    .print-break {
+        page-break-before: always;
+    }
+}

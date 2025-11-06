@@ -1,0 +1,8 @@
+{
+  "test_count": 10,
+  "avg_response_time_ms": 2067.6416397094727,
+  "min_response_time_ms": 2045.1958179473877,
+  "max_response_time_ms": 2085.845708847046,
+  "std_dev_ms": 11.664041124831554,
+  "timestamp": "2025-11-03 14:38:13.240848"
+}
